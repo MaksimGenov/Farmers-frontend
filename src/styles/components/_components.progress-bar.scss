@@ -1,0 +1,36 @@
+.c-progress-bar {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: color(transperant);
+  border-radius: $global-radius;
+  padding: $inuit-global-spacing-unit-small;
+  font: inherit;
+  
+  &__done {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    height: 100%;
+    background-color: color(green);
+    border-top-left-radius: $global-radius;
+    border-bottom-left-radius: $global-radius;
+    z-index: -1;
+  }
+  &__background {
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $global-radius;
+    background-color: color(red);
+    z-index: -2;
+  }
+}

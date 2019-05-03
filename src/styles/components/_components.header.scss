@@ -1,0 +1,17 @@
+.c-header {
+  display: flex;
+  background-color: color(sky-blue);
+  padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit;
+  margin-bottom: $inuit-global-spacing-unit-large;
+  a {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+  h1 {
+    margin: 0;
+  }
+}

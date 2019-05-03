@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-boost": "^0.3.1",
+    "formik": "^1.5.4",
+    "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1",
+    "inuitcss": "^6.0.0",
     "react": "^16.8.6",
+    "react-apollo": "^2.5.5",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "sass": "^1.19.0",
+    "sass-mq": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,6 +35,15 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "globals": [
+      "fetch",
+      "it"
     ]
   }
 }

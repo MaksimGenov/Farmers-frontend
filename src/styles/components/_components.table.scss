@@ -1,0 +1,20 @@
+.c-table {
+  &__body {
+    height: 30rem;
+    overflow-y: scroll;
+    padding: $inuit-global-spacing-unit 0;
+    box-shadow: 2px 2px 5px color(light-grey) inset, -2px -2px 5px color(light-grey) inset;
+    margin-bottom: $inuit-global-spacing-unit;
+  }
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: inherit;
+    border: 1px solid color(light-grey);
+    border-radius: $global-radius;
+    box-shadow: 0 0 10px color(light-grey) inset;
+    width: 100%;
+    padding: $inuit-global-spacing-unit-small;
+  }
+}

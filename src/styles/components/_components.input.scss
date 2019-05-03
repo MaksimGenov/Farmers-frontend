@@ -1,0 +1,22 @@
+.c-input {
+  width: 100%;
+  font:inherit;
+  border-radius: $global-radius;
+  border: 1px solid color(light-grey); 
+  padding: $inuit-global-spacing-unit-small;
+  box-shadow: 0 0 10px color(light-grey) inset;
+
+  &:focus {
+    box-shadow: 2px 2px 5px color(sky-blue), -2px -2px 5px color(sky-blue);
+    border-radius: $global-radius;
+    border: 1px solid color(sky-blue); 
+  }
+
+  &--small {
+    padding: $inuit-global-spacing-unit-tiny;
+  }
+
+  &--large {
+    padding: $inuit-global-spacing-unit-tiny;
+  }
+}

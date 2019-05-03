@@ -1,0 +1,15 @@
+$colors: (
+  red: rgb(214, 38, 38),
+  sky-blue: rgb(156, 156, 248),
+  blue: blue,
+  light-grey: rgb(204, 198, 198),
+  black: black,
+  white: white,
+  yellow: rgb(255, 224, 46),
+  green: green,
+  transperant:  rgba(0, 0, 0, 0),
+);
+
+@function color($name) {
+  @return map-get($colors,$name)
+}

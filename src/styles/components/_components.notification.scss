@@ -1,0 +1,9 @@
+.c-notification {
+  font-size: 1rem;
+  border-radius: $global-radius;
+  text-align: center;
+
+  &--danger {
+    background-color: red;
+  }
+}

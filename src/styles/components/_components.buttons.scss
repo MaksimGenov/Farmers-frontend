@@ -1,0 +1,220 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+@mixin hover-on-enabled($color) {
+  &:hover:not([disabled]),
+  &:focus:not([disabled]) {
+    background-color: $color;
+  }
+}
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small;
+  transition: $global-transition;
+  border-radius: $global-radius;
+  border: 1px solid color(light-grey);
+  text-decoration: none;
+  width: 100%;
+  
+  &:disabled,
+  &:disabled:hover {
+    opacity: 0.3;
+  }
+}
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: color(blue);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: #fff;
+  }
+
+  @include hover-on-enabled(darken(color(blue), 10));
+  // &:hover:not([disabled]),
+  // &:focus:not([disabled]) {
+  //   background-color: #3774a2;
+  // }
+
+}
+
+
+.c-btn--secondary {
+  background-color: #2f4054;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @include hover-on-enabled(#1d2733);
+  // &:hover,
+  // &:focus {
+  //   background-color: #1d2733;
+  // }
+
+}
+
+.c-btn--danger {
+  background-color: color(red);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @include hover-on-enabled(darken(color(red), 10));
+
+}
+
+.c-btn--warning {
+  background-color: color(yellow);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  @include hover-on-enabled(darken(color(yellow), 10));
+  // &:hover,
+  // &:focus {
+  //   background-color: #1d2733;
+  // }
+
+}
+
+
+.c-btn--tertiary {
+  background-color: #fff;
+  color: #4a8ec2;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: #4a8ec2;
+  }
+
+  &:hover,
+  &:focus {
+    color: #3774a2;
+  }
+
+}
+
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-tiny;
+}
+
+.c-btn--large {
+  padding: $inuit-global-spacing-unit $inuit-global-spacing-unit-large;
+}
+
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$btn-ghost-border-width: 2px;
+
+.c-btn--ghost {
+  border: $btn-ghost-border-width solid currentColor;
+  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    background: none;
+  }
+
+  &.c-btn--small {
+    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+  }
+
+  &.c-btn--large {
+    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+  }
+
+  &.c-btn--primary {
+    color: #4a8ec2;
+
+    &:hover,
+    &:focus {
+      color: #3774a2;
+    }
+
+  }
+
+  &.c-btn--secondary {
+    color: #2f4054;
+
+    &:hover,
+    &:focus {
+      color: #1d2733;
+    }
+
+  }
+
+  &.c-btn--tertiary {
+    color: #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+    }
+
+  }
+
+}

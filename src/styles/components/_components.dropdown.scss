@@ -1,0 +1,39 @@
+.c-dropdown {
+  position: relative;
+}
+
+.c-dropdown__header {
+  display: flex;
+  border: 1px solid color(light-grey);
+  border-radius: $global-radius;
+  border-top-right-radius: $global-radius;
+  box-shadow: 0 0 10px color(light-grey) inset;
+
+  & > div {
+    display: inline-block;
+    padding: $inuit-global-spacing-unit-small;
+  }
+  & > div:nth-child(1) {
+    flex-grow: 8;
+  }
+  & > div:nth-child(2) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid color(light-grey);
+  }
+}
+
+.c-dropdown__content {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  overflow: hidden;
+  padding: $inuit-global-spacing-unit-small;
+  width: 100%;
+  border: 1px solid color(light-grey);
+  border-top: none;
+  border-bottom-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+}
